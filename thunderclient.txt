@@ -1,0 +1,86 @@
+//Collection of samples thunderclient settings and i/p o/p
+
+1. AUTHENTICATION
+
+1.1 Create a new user
+http://localhost:5000/api/auth/createuser
+1.1.1 Header RAW
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Content-Type: application/json
+1.1.2 Body
+{
+  "name": "Anish Shrestha",
+  "email": "a@edu.np",
+  "password":"this is password"
+}
+
+1.2 User login using creds 
+http://localhost:5000/api/auth/login
+1.2.1 Header RAW
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Content-Type: application/json
+1.2.2 Body
+{
+  "email": "a@edu.np",
+  "password":"asdfghjkl"
+}
+
+1.3 Get User Data
+http://localhost:5000/api/auth/getuser
+1.3.1 Header RAW
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ3MTZkY2NiOTM5OTFlNDdlYWE2MjQ1In0sImlhdCI6MTY4NTE1ODQ5MH0.Cf2qVdQJ1drL78R3Sug4kh1yq1A7OrZmhwHkvkSDElE
+1.3.2 Body
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ3MTZkY2NiOTM5OTFlNDdlYWE2MjQ1In0sImlhdCI6MTY4NTE1ODQ5MH0.Cf2qVdQJ1drL78R3Sug4kh1yq1A7OrZmhwHkvkSDElE
+
+
+
+2. Notes
+2.1 Fetch All Notes
+http://localhost:5000/api/notes/fetchallnotes
+2.1.1 Header RAW
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ3MTZkY2NiOTM5OTFlNDdlYWE2MjQ1In0sImlhdCI6MTY4NTE2MDE0Nn0.AEN6VNKwdDzFiZFQ3_2AuhGCezBvP83nA-JiR6RVD50
+
+2.2 Add Note
+http://localhost:5000/api/notes/addnote
+2.2.1 Header RAW
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ3MTZkY2NiOTM5OTFlNDdlYWE2MjQ1In0sImlhdCI6MTY4NTE2MDE0Nn0.AEN6VNKwdDzFiZFQ3_2AuhGCezBvP83nA-JiR6RVD50
+Content-Type: application/json
+
+2.2.2 Body
+{
+  "title":"Wake Up3",
+  "description": "get up fast",
+  "tag":"personal"
+}
+
+2.3 Update Note
+http://localhost:5000/api/notes/updatenote/6471839e069d5191952d67d4
+2.3.1 Header
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ3MTZkY2NiOTM5OTFlNDdlYWE2MjQ1In0sImlhdCI6MTY4NTE2MDE0Nn0.AEN6VNKwdDzFiZFQ3_2AuhGCezBvP83nA-JiR6RVD50
+Content-Type: application/json
+2.3.2 Body
+{
+  "title":"Update",
+  "description": "Note updated",
+  "tag":"test"
+}
+
+2.4 Delete Note
+http://localhost:5000/api/notes/deletenote/64718411069d5191952d67d6
+2.4.1 Header RAW
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ3MTZkY2NiOTM5OTFlNDdlYWE2MjQ1In0sImlhdCI6MTY4NTE2MDE0Nn0.AEN6VNKwdDzFiZFQ3_2AuhGCezBvP83nA-JiR6RVD50
+Content-Type: application/json
